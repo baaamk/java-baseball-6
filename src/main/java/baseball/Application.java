@@ -1,7 +1,13 @@
 package baseball;
 
+import baseball.controller.BaseBall;
+import baseball.view.InputView;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+
+        BaseBall baseBall = new BaseBall();
+        //while 구문 있던 부분 수정
+        baseBall.playBall();
     }
 }
