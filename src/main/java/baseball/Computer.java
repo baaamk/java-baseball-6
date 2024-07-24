@@ -2,6 +2,9 @@ package baseball;
 
 import camp.nextstep.edu.missionutils.Randoms;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Computer {
     private int[] numbers;
 
@@ -10,8 +13,15 @@ public class Computer {
     }
 
     public void generateNumbers(){
-        for (int i = 0; i < 3; i++){
-            this.numbers[i] = Randoms.pickNumberInRange(1, 9);
+        Set<Integer> generatedNumbers = new HashSet<>();
+        int index = 0;
+
+        while (generatedNumbers.size() < 3) {
+            int number = Randoms.pickNumberInRange(1, 9);
+            if (!generatedNumbers.contains(number)) {
+                this.numbers[index++] = number;
+                generatedNumbers.add(number);
+            }
         }
     }
 
