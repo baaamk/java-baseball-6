@@ -8,7 +8,7 @@ public class User {
 
     /**
      * 게임 시작
-     * @param numbers
+     * @param numbers 컴퓨터가 생성한 숫자
      */
     public void startGame(int[] numbers) {
 
@@ -31,7 +31,7 @@ public class User {
 
     /**
      * 입력받은 숫자가 유효한지 확인
-     * @param userInput
+     * @param userInput 사용자 입력
      */
     private void checkValidInput(String userInput) {
         // 입력받은 숫자가 3자리인지 확인
@@ -71,9 +71,9 @@ public class User {
 
     /**
      * 입력받은 숫자가 정답인지 확인
-     * @param numbers
-     * @param userInput
-     * @return
+     * @param numbers 컴퓨터가 생성한 숫자
+     * @param userInput 사용자 입력
+     * @return 정답 여부
      */
     public boolean checkNumbers(int[] numbers, String userInput) {
         // 입력받은 숫자를 배열로 변환
@@ -90,8 +90,7 @@ public class User {
         for (int i = 0; i < 3; i++) {
             if (numbers[i] == userNumbers[i]) {
                 strike++;
-            }
-            else if (contains(numbers, userNumbers[i])) {
+            } else if (contains(numbers, userNumbers[i])) {
                 ball++;
             }
         }
@@ -102,8 +101,7 @@ public class User {
             System.out.print(ball + "볼");
             if (strike > 0) {
                 System.out.print(" ");
-            }
-            else {
+            } else {
                 System.out.println();
             }
         }
@@ -127,9 +125,9 @@ public class User {
 
     /**
      * 배열에 숫자가 포함되어 있는지 확인
-     * @param numbers
-     * @param userNumber
-     * @return
+     * @param numbers 컴퓨터가 생성한 숫자
+     * @param userNumber 사용자 입력 숫자
+     * @return 포함 여부
      */
     private boolean contains(int[] numbers, int userNumber) {
         for (int number : numbers) {

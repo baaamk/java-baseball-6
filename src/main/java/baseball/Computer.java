@@ -38,7 +38,7 @@ public class Computer {
 
     /**
      * 생성된 숫자 반환
-     * @return
+     * @return 생성된 숫자
      */
     public int[] getNumbers(){
         return this.numbers;
