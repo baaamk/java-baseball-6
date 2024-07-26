@@ -8,6 +8,9 @@ public class Game {
     public Game() {
     }
 
+    /**
+     * 게임 시작
+     */
     public void startGame(){
         while (true) {
             Computer computer = new Computer();

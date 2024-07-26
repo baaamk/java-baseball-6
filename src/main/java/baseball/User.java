@@ -6,6 +6,10 @@ public class User {
     public User() {
     }
 
+    /**
+     * 게임 시작
+     * @param numbers
+     */
     public void startGame(int[] numbers) {
 
         boolean correct = false;
@@ -24,6 +28,11 @@ public class User {
 
     }
 
+
+    /**
+     * 입력받은 숫자가 유효한지 확인
+     * @param userInput
+     */
     private void checkValidInput(String userInput) {
         // 입력받은 숫자가 3자리인지 확인
         if (userInput.length() != 3) {
@@ -60,6 +69,12 @@ public class User {
 
     }
 
+    /**
+     * 입력받은 숫자가 정답인지 확인
+     * @param numbers
+     * @param userInput
+     * @return
+     */
     public boolean checkNumbers(int[] numbers, String userInput) {
         // 입력받은 숫자를 배열로 변환
         int[] userNumbers = new int[3];
@@ -110,6 +125,12 @@ public class User {
 
     }
 
+    /**
+     * 배열에 숫자가 포함되어 있는지 확인
+     * @param numbers
+     * @param userNumber
+     * @return
+     */
     private boolean contains(int[] numbers, int userNumber) {
         for (int number : numbers) {
             if (number == userNumber) {
