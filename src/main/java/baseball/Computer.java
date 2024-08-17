@@ -12,7 +12,7 @@ public class Computer {
 
 	public static final Computer computer = new Computer();
 
-	public void pickThreeRandomNumber() {
+	public void setPickedRandomList() {
 		while (pickedRandomList.size() < 3){
 			int num = Randoms.pickNumberInRange(startNum, endNum);
 			pickedRandomList.add(num);
