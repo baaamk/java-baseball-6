@@ -13,4 +13,10 @@ public class Application {
         player.changeToList();
         return player.getInputNumList();
     }
+
+    private static List<Integer> getComputerNumList() {
+        Computer computer = Computer.computer;
+        computer.setPickedRandomList();
+        return computer.getPickedRandomList();
+    }
 }
