@@ -13,13 +13,20 @@ public class Game {
 	public void playGame() {
 		for (int i = 0; i <= playerNumList.size(); i++) {
 			for(int j = 0; j <= computerNumList.size(); j++){
-
+				checkStrike(i, j);
 			}
 		}
 	}
 
+	private void checkStrike(int playerNumIndex, int computerNumIndex){
+		if(playerNumIndex == computerNumIndex &&
+			playerNumList.get(playerNumIndex).equals(computerNumList.get(computerNumIndex))){
+			strikes ++;
+		}
+	}
+
 	public Game(List<Integer> playerNumList, List<Integer> computerNumList) {
-		this.playerNumList = playerNumList; 
+		this.playerNumList = playerNumList;
 		this.computerNumList = computerNumList;
 	}
 }
