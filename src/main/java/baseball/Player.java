@@ -20,4 +20,8 @@ public class Player {
 		if(inputNum.length() != 3)
 			throw new IllegalArgumentException();
 	}
+
+	public List<Integer> getInputNumList() {
+		return inputNumList; 
+	}
 }
