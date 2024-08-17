@@ -7,9 +7,4 @@ public class Player {
 		System.out.print("숫자를 입력해주세요 : ");
 		final String inputNum = Console.readLine();
 	}
-
-	private static void validateLength(final String inputNum){
-		if(inputNum.length() != 3)
-			throw new IllegalArgumentException();
-	}
 }
