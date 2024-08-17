@@ -14,7 +14,7 @@ public class Player {
 
 	private String inputNum;
 
-	public void inputNumbers() {
+	public void setInputNumList() {
 		System.out.print("숫자를 입력해주세요 : ");
 		inputNum = Console.readLine();
 		validateLength(inputNum);
