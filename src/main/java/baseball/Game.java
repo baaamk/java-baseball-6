@@ -14,7 +14,7 @@ public class Game {
 
 	private static final int THREE = 3;
 
-	public void playGame() {
+	private void playGame() {
 		for (int i = 0; i < playerNumList.size(); i++) {
 			for(int j = 0; j < computerNumList.size(); j++){
 				checkStrike(i, j);
@@ -46,7 +46,7 @@ public class Game {
 		return strikes == THREE;
 	}
 
-	public void printResult() {
+	private void printResult() {
 		if(isSuccess()){
 			System.out.println("3스트라이크");
 			System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
@@ -58,8 +58,16 @@ public class Game {
 		}
 	}
 
-	public void printGameStart() {
+	private void printGameStart() {
 		System.out.println("숫자 야구 게임을 시작합니다.");
+	}
+
+	public void start(){
+		while (true){
+			printGameStart();
+			playGame();
+			printResult();
+		}
 	}
 
 	public Game(List<Integer> playerNumList, List<Integer> computerNumList) {

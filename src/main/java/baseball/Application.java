@@ -8,9 +8,7 @@ public class Application {
         List<Integer> playerNumList = getPlayerNumList();
         List<Integer> computerNumList = getComputerNumList();
         Game game = new Game(playerNumList, computerNumList);
-        game.printGameStart();
-        game.playGame();
-        game.printResult();
+        game.start();
     }
 
     private static List<Integer> getPlayerNumList() {
