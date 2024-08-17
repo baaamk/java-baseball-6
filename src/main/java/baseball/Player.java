@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 import camp.nextstep.edu.missionutils.Console;
 
 public class Player {
+
+	public static final Player player = new Player(); 
 	private List<Integer> inputNumList = new ArrayList<>();
 
 	private String inputNum;
@@ -32,5 +34,8 @@ public class Player {
 
 	public List<Integer> getInputNumList() {
 		return inputNumList; 
+	}
+
+	private Player() {
 	}
 }
