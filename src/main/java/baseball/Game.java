@@ -15,8 +15,8 @@ public class Game {
 	private static final int THREE = 3;
 
 	public void playGame() {
-		for (int i = 0; i <= playerNumList.size(); i++) {
-			for(int j = 0; j <= computerNumList.size(); j++){
+		for (int i = 0; i < playerNumList.size(); i++) {
+			for(int j = 0; j < computerNumList.size(); j++){
 				checkStrike(i, j);
 				checkBall(i, j);
 			}
