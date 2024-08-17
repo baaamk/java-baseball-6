@@ -46,6 +46,17 @@ public class Game {
 		return strikes == THREE;
 	}
 
+	public void printResult() {
+		if(isSuccess()){
+			System.out.println("3스트라이크");
+			System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
+		} else if (nothing) {
+			System.out.println("낫싱");
+		} else {
+			System.out.println(balls + "볼 " + strikes + "스트라이크");
+		}
+	}
+
 	public Game(List<Integer> playerNumList, List<Integer> computerNumList) {
 		this.playerNumList = playerNumList;
 		this.computerNumList = computerNumList;
