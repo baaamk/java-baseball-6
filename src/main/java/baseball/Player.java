@@ -21,6 +21,10 @@ public class Player {
 			throw new IllegalArgumentException();
 	}
 
+	public void changeToList(){
+		String[] splitNum = inputNum.split("");
+	}
+
 	public List<Integer> getInputNumList() {
 		return inputNumList; 
 	}
