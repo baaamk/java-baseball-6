@@ -7,8 +7,8 @@ public class Game {
 	private int strikes;
 	private int balls;
 	private boolean nothing;
-	private List<Integer> playerNumList = new ArrayList<>();
-	private List<Integer> computerNumList = new ArrayList<>();
+	private final List<Integer> playerNumList;
+	private final List<Integer> computerNumList;
 
 	private static final int ZERO = 0;
 
