@@ -12,12 +12,15 @@ public class Computer {
 
 	public static final Computer computer = new Computer();
 
-	public List<Integer> pickThreeRandomNumber() {
+	public void pickThreeRandomNumber() {
 		while (pickedRandomList.size() < 3){
 			int num = Randoms.pickNumberInRange(startNum, endNum);
 			pickedRandomList.add(num);
 		}
-		return pickedRandomList;
+	}
+
+	public List<Integer> getPickedRandomList(){
+		return pickedRandomList; 
 	}
 
 	private Computer() {
