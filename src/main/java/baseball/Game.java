@@ -19,6 +19,7 @@ public class Game {
 				checkBall(i, j);
 			}
 		}
+		checkNothing();
 	}
 
 	private void checkStrike(int playerNumIndex, int computerNumIndex){
@@ -33,6 +34,10 @@ public class Game {
 			playerNumList.get(playerNumIndex).equals(computerNumList.get(computerNumIndex))){
 			balls ++;
 		}
+	}
+
+	private void checkNothing(){
+		nothing = (strikes == ZERO && balls == ZERO);
 	}
 
 	public Game(List<Integer> playerNumList, List<Integer> computerNumList) {
