@@ -14,6 +14,7 @@ public class Game {
 		for (int i = 0; i <= playerNumList.size(); i++) {
 			for(int j = 0; j <= computerNumList.size(); j++){
 				checkStrike(i, j);
+				checkBall(i, j);
 			}
 		}
 	}
@@ -22,6 +23,13 @@ public class Game {
 		if(playerNumIndex == computerNumIndex &&
 			playerNumList.get(playerNumIndex).equals(computerNumList.get(computerNumIndex))){
 			strikes ++;
+		}
+	}
+
+	private void checkBall(int playerNumIndex, int computerNumIndex){
+		if(playerNumIndex != computerNumIndex &&
+			playerNumList.get(playerNumIndex).equals(computerNumList.get(computerNumIndex))){
+			balls ++;
 		}
 	}
 
