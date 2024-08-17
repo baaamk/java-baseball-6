@@ -4,11 +4,16 @@ import java.util.List;
 
 public class Application {
     public static void main(String[] args) {
+        boolean isMoreGame = true;
         // TODO: 프로그램 구현
-        List<Integer> playerNumList = getPlayerNumList();
-        List<Integer> computerNumList = getComputerNumList();
-        Game game = new Game(playerNumList, computerNumList);
-        game.start();
+        while (isMoreGame) {
+            List<Integer> playerNumList = getPlayerNumList();
+            List<Integer> computerNumList = getComputerNumList();
+            Game game = new Game(playerNumList, computerNumList);
+            game.start();
+            if(game.isSuccess())
+                isMoreGame = game.isMoreGame();
+        }
     }
 
     private static List<Integer> getPlayerNumList() {

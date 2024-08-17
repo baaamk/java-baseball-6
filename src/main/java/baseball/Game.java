@@ -3,6 +3,8 @@ package baseball;
 import java.util.ArrayList;
 import java.util.List;
 
+import camp.nextstep.edu.missionutils.Console;
+
 public class Game {
 	private int strikes;
 	private int balls;
@@ -13,6 +15,8 @@ public class Game {
 	private static final int ZERO = 0;
 
 	private static final int THREE = 3;
+
+	private static final Integer moreGame = 1;
 
 	private void playGame() {
 		for (int i = 0; i < playerNumList.size(); i++) {
@@ -42,7 +46,7 @@ public class Game {
 		nothing = (strikes == ZERO && balls == ZERO);
 	}
 
-	private boolean isSuccess() {
+	public boolean isSuccess() {
 		return strikes == THREE;
 	}
 
@@ -62,15 +66,23 @@ public class Game {
 		System.out.println("숫자 야구 게임을 시작합니다.");
 	}
 
+	public boolean isMoreGame(){
+		String input = Console.readLine();
+		Integer inputNum = Integer.valueOf(input);
+		return inputNum.equals(moreGame);
+	}
+
 	public void start(){
-		while (true){
 			printGameStart();
 			playGame();
 			printResult();
-		}
+
 	}
 
 	public Game(List<Integer> playerNumList, List<Integer> computerNumList) {
+		this.strikes = 0;
+		this.balls = 0;
+		this.nothing = false;
 		this.playerNumList = playerNumList;
 		this.computerNumList = computerNumList;
 	}
