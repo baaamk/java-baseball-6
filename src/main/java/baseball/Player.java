@@ -1,7 +1,9 @@
 package baseball;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import camp.nextstep.edu.missionutils.Console;
 
@@ -23,6 +25,9 @@ public class Player {
 
 	public void changeToList(){
 		String[] splitNum = inputNum.split("");
+		inputNumList = Arrays.stream(splitNum)
+				.map(Integer::valueOf)
+				.collect(Collectors.toList());
 	}
 
 	public List<Integer> getInputNumList() {
