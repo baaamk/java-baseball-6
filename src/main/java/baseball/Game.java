@@ -12,6 +12,8 @@ public class Game {
 
 	private static final int ZERO = 0;
 
+	private static final int THREE = 3;
+
 	public void playGame() {
 		for (int i = 0; i <= playerNumList.size(); i++) {
 			for(int j = 0; j <= computerNumList.size(); j++){
@@ -38,6 +40,10 @@ public class Game {
 
 	private void checkNothing(){
 		nothing = (strikes == ZERO && balls == ZERO);
+	}
+
+	private boolean isSuccess() {
+		return strikes == THREE;
 	}
 
 	public Game(List<Integer> playerNumList, List<Integer> computerNumList) {
