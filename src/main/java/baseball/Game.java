@@ -10,6 +10,8 @@ public class Game {
 	private List<Integer> playerNumList = new ArrayList<>();
 	private List<Integer> computerNumList = new ArrayList<>();
 
+	private static final int ZERO = 0;
+
 	public void playGame() {
 		for (int i = 0; i <= playerNumList.size(); i++) {
 			for(int j = 0; j <= computerNumList.size(); j++){
