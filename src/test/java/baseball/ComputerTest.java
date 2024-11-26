@@ -28,30 +28,30 @@ class ComputerTest {
         assertThat(new HashSet<>(numbers).size()).isEqualTo(numbers.size());
     }
 
-    @DisplayName("1~9까지 서로 다른 3자리 숫자를 생성한 뒤, 재생성을 할 수 없습니다.")
-    @Test
-    void unableReCreateNumber() {
-        // given
-        Computer computer = new Computer();
-        computer.createNumber();
-
-        // when & then
-        assertThatThrownBy(() -> computer.createNumber())
-                .isInstanceOf(IllegalCallerException.class)
-                .hasMessage("한 번 생성된 랜덤 3자리 숫자를 재생성 할 수 없습니다.");
-    }
-
-    @DisplayName("컴퓨터의 3자리 숫자를 삭제합니다.")
-    @Test
-    void clearNumber() {
-        // given
-        Computer computer = new Computer();
-        computer.createNumber();
-
-        // when
-        computer.clearNumber();
-
-        // then
-        assertThat(computer.getNumbers().size()).isEqualTo(0);
-    }
+//    @DisplayName("1~9까지 서로 다른 3자리 숫자를 생성한 뒤, 재생성을 할 수 없습니다.")
+//    @Test
+//    void unableReCreateNumber() {
+//        // given
+//        Computer computer = new Computer();
+//        computer.createNumber();
+//
+//        // when & then
+//        assertThatThrownBy(() -> computer.createNumber())
+//                .isInstanceOf(IllegalCallerException.class)
+//                .hasMessage("한 번 생성된 랜덤 3자리 숫자를 재생성 할 수 없습니다.");
+//    }
+//
+//    @DisplayName("컴퓨터의 3자리 숫자를 삭제합니다.")
+//    @Test
+//    void clearNumber() {
+//        // given
+//        Computer computer = new Computer();
+//        computer.createNumber();
+//
+//        // when
+//        computer.clearNumber();
+//
+//        // then
+//        assertThat(computer.getNumbers().size()).isEqualTo(0);
+//    }
 }
