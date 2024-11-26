@@ -17,30 +17,32 @@ public class Player {
 
     public void savePlayerNumber(String numberString) {
         clear(); // 초기화
+        validInputSize(numberString);   // 입력 값의 자릿수 검증
 
         for (char number : numberString.toCharArray()) {
-            if (!valid(number)) {
-                throw new IllegalArgumentException("1부터 9까지 서로 다른 3자리 수가 아닙니다.");
-            }
+            validNumber(number);
             numbers.add(Character.getNumericValue(number));
         }
     }
 
-    private boolean valid(char number) {
-        // 3자리 보다 많은 수를 입력한 경우
-        if (numbers.size() == 3) {
-            return false;
+    private void validInputSize(String input) {
+        if (input.length() != 3) {
+            throw new IllegalArgumentException("1부터 9까지 서로 다른 3자리 수가 아닙니다.");
         }
+    }
+
+    private void validNumber(char number) {
         // 1~9까지 숫자가 아닌 경우
-        if (!Character.isDigit(number)) {
-            return false;
+        if (Character.getNumericValue(number) < 1) {
+            throw new IllegalArgumentException("1부터 9까지 서로 다른 3자리 수가 아닙니다.");
+        }
+        if (Character.getNumericValue(number) > 9) {
+            throw new IllegalArgumentException("1부터 9까지 서로 다른 3자리 수가 아닙니다.");
         }
         // 중복된 숫자인 경우
         if (numbers.contains(Character.getNumericValue(number))) {
-            return false;
+            throw new IllegalArgumentException("1부터 9까지 서로 다른 3자리 수가 아닙니다.");
         }
-
-        return true;
     }
 
     private void clear() {
