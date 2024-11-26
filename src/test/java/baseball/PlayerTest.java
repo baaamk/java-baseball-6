@@ -36,7 +36,7 @@ class PlayerTest {
         // given
         Player player = new Player();
         String number1 = "123";
-        String number2 = "730";
+        String number2 = "732";
         player.savePlayerNumber(number1);
 
         // when
@@ -44,7 +44,7 @@ class PlayerTest {
 
         // then
         assertThat(player.getNumbers().size()).isEqualTo(3);
-        assertThat(player.getNumbers()).contains(7,3,0);
+        assertThat(player.getNumbers()).contains(7,3,2);
     }
 
     @DisplayName("1부터 9까지 서로 다른 3자리의 수가 아니라면 저장할 수 없다.")
@@ -64,8 +64,11 @@ class PlayerTest {
         return Stream.of(
                 new String("112"),
                 new String("999"),
-                new String("977"),
-                new String("ab1")
+                new String("901"),
+                new String("ab1"),
+                new String("12"),
+                new String("1")
         );
     }
+
 }
