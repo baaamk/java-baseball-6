@@ -19,7 +19,7 @@ public class OutputView {
         System.out.println();
     }
 
-    public void successMessage() {
-        System.out.println(NUMBER_LENGTH + "개의 숫자를 모두 맞히셨습니다! 게임 종료");
+    public void successMessage(int numberLength) {
+        System.out.println(numberLength + "개의 숫자를 모두 맞히셨습니다! 게임 종료");
     }
 }

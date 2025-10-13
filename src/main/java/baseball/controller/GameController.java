@@ -34,7 +34,7 @@ public class GameController {
             outputView.hintMessage(gameResult.getBall(), gameResult.getStrike());
 
             if (gameResult.getStrike() == NUMBER_LENGTH) {
-                outputView.successMessage();
+                outputView.successMessage(NUMBER_LENGTH);
                 String inputNum = inputView.requestRetryOrFinish();
                 int retryOrFinish = validateRetryOrFinish(inputNum);
                 if (retryOrFinish == 1) {
