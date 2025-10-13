@@ -1,9 +1,8 @@
 package baseball.domain;
 
 public class GameResult {
-    int ball;
-    int strike;
-    boolean isFinish;
+    private int ball;
+    private int strike;
 
     public GameResult() {
     }
@@ -11,7 +10,14 @@ public class GameResult {
     public void reset() {
         ball = 0;
         strike = 0;
-        isFinish = false;
+    }
+
+    public int getBall() {
+        return ball;
+    }
+
+    public int getStrike() {
+        return strike;
     }
 
     public void plusBall() {
@@ -22,7 +28,4 @@ public class GameResult {
         strike++;
     }
 
-    public void changeIsFinishTrue() {
-        isFinish = true;
-    }
 }
