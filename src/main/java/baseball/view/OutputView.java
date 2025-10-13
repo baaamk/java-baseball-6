@@ -14,7 +14,9 @@ public class OutputView {
             System.out.print(ball + "볼 ");
 
         if (strike != 0)
-            System.out.println(strike + "스트라이크");
+            System.out.print(strike + "스트라이크");
+
+        System.out.println();
     }
 
     public void successMessage() {
