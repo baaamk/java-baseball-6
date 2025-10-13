@@ -2,8 +2,6 @@ package baseball.view;
 
 public class OutputView {
 
-    final int NUMBER_LENGTH = 3;
-
     public void hintMessage(int ball, int strike) {
         if (ball == 0 && strike == 0) {
             System.out.println("낫싱");
