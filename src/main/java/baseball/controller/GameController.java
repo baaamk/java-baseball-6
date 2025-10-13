@@ -10,7 +10,7 @@ import java.util.List;
 
 public class GameController {
 
-    final int NUMBER_LENGTH = 4;
+    final int NUMBER_LENGTH = 3;
 
     public void start(GameResult gameResult,
                       InputView inputView,
