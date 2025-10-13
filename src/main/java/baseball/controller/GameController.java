@@ -32,5 +32,20 @@ public class GameController {
         return computer;
     }
 
-    // 볼, 스트라이크 판단 로직 생성
+    // 볼, 스트라이크 판단 로직
+    public void compareNumbers(List<Integer> computer,
+                               List<Integer> player,
+                               GameResult gameResult) {
+        for (int i = 0; i < 3; i++) {
+            int num = computer.get(i);
+            if (num == player.get(i)) {
+                gameResult.plusStrike();
+                continue;
+            }
+
+            if (player.contains(num)) {
+                gameResult.plusBall();
+            }
+        }
+    }
 }
