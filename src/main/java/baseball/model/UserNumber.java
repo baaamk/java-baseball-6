@@ -8,6 +8,10 @@ public class UserNumber {
         this.numbers = numbers;
     }
 
+    public String getNumbers() {
+        return numbers;
+    }
+
     public static UserNumber of(String numbers) {
         validate(numbers);
         return new UserNumber(numbers);
@@ -39,10 +43,10 @@ public class UserNumber {
             int c = numbers.charAt(i) - '0';
             arr[c]++;
             if (arr[c] != 1) {
-                return false;
+                return true;
             }
         }
 
-        return true;
+        return false;
     }
 }
