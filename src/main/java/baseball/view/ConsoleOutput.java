@@ -1,5 +1,7 @@
 package baseball.view;
 
+import baseball.model.GameResult;
+
 public class ConsoleOutput {
 
     public void printStartMessage() {
@@ -10,8 +12,16 @@ public class ConsoleOutput {
         System.out.print("숫자를 입력 해주세요: ");
     }
 
-    public String printGameMessage() {
-        return null;
+    public void printGameMessage(GameResult gameResult) {
+        if (gameResult.isNoting()) {
+            System.out.println("낫싱");
+            return;
+        }
+        if (gameResult.isThreeStrike()) {
+            System.out.println("3스트라이크");
+            return;
+        }
+        System.out.println(gameResult.getBall() + "볼 " + gameResult.getStrike() + "스트라이크");
     }
 
     public void printResultMessage() {
