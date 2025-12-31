@@ -1,4 +1,4 @@
-package baseball.domain;
+package baseball.model.domain.vo;
 
 public class BaseballNumber {
     private final int baseballNumber;
