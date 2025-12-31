@@ -9,6 +9,10 @@ public class Result {
         this.ball = ball;
     }
 
+    public boolean hasThreeStrike(){
+        return strike == 3;
+    }
+
     public boolean isStrike(int expected) {
         return strike == expected;
     }
@@ -19,5 +23,13 @@ public class Result {
 
     public boolean isNothing() {
         return strike == 0 && ball == 0;
+    }
+
+    public int getStrike() {
+        return strike;
+    }
+
+    public int getBall() {
+        return ball;
     }
 }
