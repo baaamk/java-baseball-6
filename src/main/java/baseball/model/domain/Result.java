@@ -8,4 +8,16 @@ public class Result {
         this.strike = strike;
         this.ball = ball;
     }
+
+    public boolean isStrike(int expected) {
+        return strike == expected;
+    }
+
+    public boolean isBall(int expected) {
+        return ball == expected;
+    }
+
+    public boolean isNothing() {
+        return strike == 0 && ball == 0;
+    }
 }
