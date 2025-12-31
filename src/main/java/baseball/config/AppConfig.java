@@ -1,10 +1,16 @@
 package baseball.config;
 
 import baseball.controller.Controller;
+import baseball.service.Service;
 import baseball.view.InputView;
 import baseball.view.OutputView;
 
 public class AppConfig {
+
+    public Controller controller(){
+        return new Controller(inputView(), outputView(), service());
+    }
+
     private InputView inputView() {
         return new InputView();
     }
@@ -13,7 +19,9 @@ public class AppConfig {
         return new OutputView();
     }
 
-    public Controller controller(){
-        return new Controller(inputView(), outputView());
+    private Service service() {
+        return new Service();
     }
+
+
 }
