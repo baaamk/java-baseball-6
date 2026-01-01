@@ -28,7 +28,7 @@ public class StringParser {
 
     private static void validateInputNumber(String inputNumbers) {
         if (!inputNumbers.matches(NUMBER_REGEX)) {
-            throw new IllegalArgumentException(ErrorMessage.INVALID_DUPLICATE_NUMBER.getMessage());
+            throw new IllegalArgumentException(ErrorMessage.INVALID_DUPLICATE_AND_RANGE_NUMBER.getMessage());
         }
     }
 

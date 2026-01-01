@@ -18,7 +18,7 @@ public class BaseballNumber {
 
     private static void validateNumber(int baseballNumber) {
         if (baseballNumber < 1 || baseballNumber > 9) {
-            throw new IllegalArgumentException(ErrorMessage.INVALID_DUPLICATE_NUMBER.getMessage());
+            throw new IllegalArgumentException(ErrorMessage.INVALID_DUPLICATE_AND_RANGE_NUMBER.getMessage());
         }
     }
 

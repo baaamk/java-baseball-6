@@ -33,7 +33,7 @@ class StringParserTest {
     void 입력된_숫자가_범위를_어났다() {
         assertThatThrownBy(() -> StringParser.parseToList("1230"))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage(ErrorMessage.INVALID_DUPLICATE_NUMBER.getMessage());
+                .hasMessage(ErrorMessage.INVALID_DUPLICATE_AND_RANGE_NUMBER.getMessage());
     }
 
     @Test
@@ -41,7 +41,7 @@ class StringParserTest {
     void 입력된_숫자가_중복을_포함한다() {
         assertThatThrownBy(() -> StringParser.parseToList("121"))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessage(ErrorMessage.INVALID_DUPLICATE_NUMBER.getMessage());
+                .hasMessage(ErrorMessage.INVALID_DUPLICATE_AND_RANGE_NUMBER.getMessage());
     }
 
     @Test
