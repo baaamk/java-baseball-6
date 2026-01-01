@@ -1,10 +1,14 @@
 package baseball.model.domain;
 
+import baseball.model.domain.vo.BaseballNumber;
+import baseball.utils.ErrorMessage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThatThrownBy;
 
 class BaseballNumbersTest {
 
@@ -54,5 +58,13 @@ class BaseballNumbersTest {
         Result result = targetNumbers.compareNumber(userNumbers);
 
         Assertions.assertTrue(result.isNothing());
+    }
+
+    @Test
+    @DisplayName("번호가 범위에 들어오지 않으면 예외로 처리한다.")
+    void 번호가_범위에_들어오지_않으면_예외로_처리한다() {
+        assertThatThrownBy(() -> BaseballNumbers.of(List.of(3, 4, 10)))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessage(ErrorMessage.INVALID_DUPLICATE_NUMBER.getMessage());
     }
 }
