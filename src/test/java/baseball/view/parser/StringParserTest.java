@@ -30,7 +30,7 @@ class StringParserTest {
 
     @Test
     @DisplayName("입력된 숫자가 범위를 벗어났다.")
-    void 입력된_숫자가_범위를_법어났다() {
+    void 입력된_숫자가_범위를_어났다() {
         assertThatThrownBy(() -> StringParser.parseToList("1230"))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage(ErrorMessage.INVALID_DUPLICATE_NUMBER.getMessage());
