@@ -20,6 +20,10 @@ public class OutputView {
     }
 
     public void printResult(ResultMapper mappedResult) {
+        chooseResult(mappedResult);
+    }
+
+    private static void chooseResult(ResultMapper mappedResult) {
         if (mappedResult.ball() == 0 && mappedResult.strike() == 0) {
             System.out.println("낫싱");
             return;
