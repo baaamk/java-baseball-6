@@ -5,7 +5,7 @@ import baseball.model.domain.BaseballNumbers;
 import baseball.model.domain.ComputerNumberGenerator;
 import baseball.model.domain.Result;
 import baseball.service.Service;
-import baseball.view.parser.StringParser;
+import baseball.converter.parser.StringParser;
 import baseball.view.InputView;
 import baseball.view.OutputView;
 

@@ -1,6 +1,6 @@
 package baseball.model.domain;
 
-import baseball.utils.ErrorMessage;
+import baseball.exception.ErrorMessage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

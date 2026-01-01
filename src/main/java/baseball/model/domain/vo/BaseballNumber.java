@@ -1,6 +1,6 @@
 package baseball.model.domain.vo;
 
-import baseball.utils.ErrorMessage;
+import baseball.exception.ErrorMessage;
 
 import java.util.Objects;
 
