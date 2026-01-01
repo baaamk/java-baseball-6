@@ -45,16 +45,16 @@ class StringParserTest {
     }
 
     @Test
-    @DisplayName("입력된 재시도 숫자가 범위를 벗어난다.")
-    void 입력된_재시도_숫자가_범위를_벗어난다() {
+    @DisplayName("입력된 재시도 숫자가 범위를 벗어난다.1")
+    void 입력된_재시도_숫자가_범위를_벗어난다1() {
         assertThatThrownBy(() -> StringParser.parseToInt("12"))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage(ErrorMessage.INVALID_RETRY_NUMBER.getMessage());
     }
 
     @Test
-    @DisplayName("입력된 재시도 숫자가 범위를 벗어난다.")
-    void 입력된_숫자가_범위를_벗어난다() {
+    @DisplayName("입력된 재시도 숫자가 범위를 벗어난다.2")
+    void 입력된_재시도_숫자가_범위를_벗어난다2() {
         assertThatThrownBy(() -> StringParser.parseToInt("3"))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage(ErrorMessage.INVALID_RETRY_NUMBER.getMessage());
