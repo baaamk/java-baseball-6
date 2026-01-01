@@ -1,5 +1,7 @@
 package baseball.model.domain.vo;
 
+import baseball.utils.ErrorMessage;
+
 import java.util.Objects;
 
 public class BaseballNumber {
@@ -10,7 +12,14 @@ public class BaseballNumber {
     }
 
     public static BaseballNumber from(int baseballNumber) {
+        validateNumber(baseballNumber);
         return new BaseballNumber(baseballNumber);
+    }
+
+    private static void validateNumber(int baseballNumber) {
+        if (baseballNumber < 1 || baseballNumber > 9) {
+            throw new IllegalArgumentException(ErrorMessage.INVALID_DUPLICATE_NUMBER.getMessage());
+        }
     }
 
     @Override
